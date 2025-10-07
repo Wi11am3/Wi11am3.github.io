@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>商品資訊</h1>
+    <table border="1">
+        <caption>本月特惠商品</caption>
+        <thead>
+            <tr>
+                <th>商品編號</th>
+                <th>商品名稱</th>
+                <th>規格</th>
+                <th>原價</th>
+                <th>特價</th>
+                <th>庫存</th>
+                <th>評價</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td>P001</td>
+            <td>無線藍芽耳機</td>
+            <td>黑色/白色</td>
+            <td>$2,500</td>
+            <td>$1,900</td>
+            <td>25</td>
+            <td>★★★★☆</td>
+        </tbody>
+        <tbody>
+            <td>P002</td>
+            <td>USB-C 充電線</td>
+            <td>1.5米</td>
+            <td>499</td>
+            <td>$299</td>
+            <td>50</td>
+            <td>★★★★★</td>
+        </tbody>
+        <tbody>
+            <td>P003</td>
+            <td>行動電源</td>
+            <td>100000mAh</td>
+            <td>$1200</td>
+            <td>$899</td>
+            <td>12</td>
+            <td>★★★★☆</td>
+        </tbody>
+        <tbody>
+            <td>P004</td>
+            <td>手機支架</td>
+            <td>可調式</td>
+            <td>$350</td>
+            <td>$199</td>
+            <td>30</td>
+            <td>★★★☆☆</td>
+        </tbody>
+        <tbody>
+            <td colspan="5"><strong>總共4項產品</strong></td>
+            <td colspan="2"><strong>限時特惠中</strong></td>
+        </tbody>
+    </table>
+
+    <h1>訂購表單</h1>
+    <fieldset>
+        <legend>商品選擇</legend>
+        <p>選擇商品 :</p>
+        <p>
+            <input type="checkbox" id="earpods" name="product" value="earpods">
+            <label for="earpods">無線藍芽耳機 - $1,900</label>
+            <select name="color" id="color">
+                <option value="">選擇顏色</option>
+                <option value="black">黑色</option>
+                <option value="white">白色</option>
+            </select>
+            <label for="quantity">數量 :</label>
+            <input type="text" id="quantity" name="quantity">
+        </p>
+        <p>
+            <input type="checkbox" id="chargeing cable" name="product" value="chargeing cable">
+            <label for="chargeing cable">USB-C 充電線 - $299</label>
+            <label for="quantity">數量 :</label>
+            <input type="text" id="quantity" name="quantity">
+        </p>
+        <p>
+            <input type="checkbox" id="battery" name="product" value="battery">
+            <label for="battery">行動電源 - $899</label>
+            <label for="quantity">數量 :</label>
+            <input type="text" id="quantity" name="quantity">
+        </p>
+        <p>
+            <input type="checkbox" id="holder" name="product" value="holder">
+            <label for="holder">手機支架 - $199</label>
+            <label for="quantity">數量 :</label>
+            <input type="text" id="quantity" name="quantity">
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>收件人資訊</legend>
+        <p>
+            <label for="name">收件人姓名 :</label>
+            <input type="text" id="name" name="name">
+        </p>
+        <p>
+            <label for="phone number">收件人電話 :</label>
+            <input type="text" id="phone number" name="phone number" placeholder="09xx-xxx-xxx">
+        </p>
+        <p>
+            <label for="mail">電子郵件 :</label>
+            <input type="text" id="mail" name="mail">
+        </p>
+        <p>收件地址 :</p>
+        <textarea name="address" id="address" rows="3" cols="70" placeholder="請輸入完整地址"></textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>配送選項</legend>
+        <p>配送方式</p>
+        <p>
+            <input type="radio" name="delivery method" id="standard" value="standard">
+            <label for="standard">標準配送 (3-5個工作天) - 免費</label>
+        </p>
+        <p>
+            <input type="radio" name="delivery method" id="fast" value="fast">
+            <label for="fast">快速配送 (1-2個工作天) - $100</label>
+        </p>
+        <p>
+            <input type="radio" name="delivery method" id="sonic" value="sonic">
+            <label for="sonic">隔夜配送 (次日到達) - $200</label>
+        </p>
+        <p>
+            <label for="time">希望配送時間 :</label>
+            <select name="time" id="time">
+                <option value="">不指定</option>
+                <option value="morning">上午</option>
+                <option value="afternoon">下午</option>
+                <option value="night">晚上</option>
+            </select>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>付款方式</legend>
+        <p>
+            <input type="radio" name="payment" id="credit card" value="credit card">
+            <label for="credit card">信用卡付款</label>
+        </p>
+        <p>
+            <input type="radio" name="apayment" id="tm" value="atm">
+            <label for="atm">ATM轉帳</label>
+        </p>
+        <p>
+            <input type="radio" name="payment" id="cash" value="cash">
+            <label for="cash">貨到付款</label>
+        </p>
+    </fieldset>
+
+    <fieldset>
+        <legend>其它資訊</legend>
+        <p>
+            <label for="coupon">優惠卷代碼 :</label>
+            <input type="text" name="code" id="code" placeholder="輸入優惠卷代碼">
+        </p>
+        <p>訂單備註 :</p>
+        <textarea name="address" id="address" rows="3" cols="70" placeholder="有任何特殊需求請在此說明"></textarea>
+        <p>
+            <input type="checkbox" id="received" name="product" value="received">
+            <label for="received">我希望收到最新商品資訊及優惠訊息</label>
+
+        </p>
+        <p>
+            <input type="checkbox" id="reading" name="product" value="reading">
+            <label for="reading">我已閱讀並同意<a href="https://developer.mozilla.org/zh-TW/docs/Web/HTML"
+                    target="_blank">購物條款</a>和<a href="https://www.w3schools.com/" target="_blank">隱私條款</a></label>
+
+        </p>
+    </fieldset>
+    <p>
+        <button type="submit">確定訂單</button>
+        <button type="reset">清除表單</button>
+    </p>
+</body>
+</html>
